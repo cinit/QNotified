@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Check out
         uses: actions/checkout@v2
-      - if: contains(github.event.issue.body) != true
+      - if: contains(github.event.issue.body, 'ejfweaxptgrsgxed' ) == false
         id: close
         name: Close Issue(template)
         uses: peter-evans/close-issue@v1
